@@ -3,7 +3,8 @@
 #include <ostream>
 
 namespace rune::core {
-Location::Location(int line, int column, int index, int length)
+Location::Location(std::size_t line, std::size_t column, std::size_t index,
+                   std::size_t length)
     : line(line), column(column), index(index), length(length) {}
 
 std::ostream &operator<<(std::ostream &os, Location location) {

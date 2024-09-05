@@ -5,10 +5,11 @@
 
 namespace rune::core {
 struct Location {
-  int line, column;
-  int index, length;
+  std::size_t line, column;
+  std::size_t index, length;
 
-  Location(int line, int column, int index, int length);
+  Location(std::size_t line, std::size_t column, std::size_t index,
+           std::size_t length);
 
   friend std::ostream &operator<<(std::ostream &os, Location location);
 };
